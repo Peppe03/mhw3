@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mhw3.css">
+    <script src="mhw3.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Benvenuto su McDonaldʹs Italia | McDonaldʹs Italia</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a id="location-icon" href="https://www.mcdonalds.it/ristorante">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#ffbc0d"
+                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                </svg>
+            </a>
+            <a id="logo-alto" href="https://www.mcdonalds.it/">
+                <img src="https://cdn.cookielaw.org/logos/c120ebe3-31a3-423b-87d8-06e7a5e685ea/287ed124-25c6-4bdc-bbfa-f6c09c9f9a56/6eb9fb66-e755-4aea-8464-ea4db999a2ce/1633102892-c61f2f7af8f2b913.png"
+                    alt="">
+            </a>
+            <button id="toggle-menu">
+                <svg class="icona-menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#ffbc0d"
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+                <svg class="icona-menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#ffbc0d"
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+            </button>
+            <div class="titoli">
+                <div class="top">
+                    <a href="https://www.mcdonalds.it/mcdonalds-italia">
+                        <span>McDonald's Italia</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/">
+                        <span>Lavora con noi</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/mcdonalds-italia/franchising">
+                        <span>Diventa Franchisee</span>
+                    </a>
+                </div>
+                <div class="bottom">
+                    <a href="https://www.mcdonalds.it/prodotti" data-titolo="prodotti">
+                        <span>I nostri prodotti</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/novita" data-titolo="novita">
+                        <span>Le novità</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/il-mondo-mcdonalds">
+                        <span>Il mondo di McDonaldʹs</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/happy-meal-time">
+                        <span>It's Happy Meal Time</span>
+                    </a>
+                    <a href="https://www.mcdonalds.it/il-nostro-impegno">
+                        <span>Il nostro impegno</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="toggle-menu-aperto hidden">
+        <div class="cerca-ristorante">
+            <a href="https://www.mcdonalds.it/ristorante">
+                <span>Cerca il ristorante più vicino a te</span><br>
+                <span class="inizio-ricerca">Inizia la ricerca</span>
+            </a>
+        </div>
+        <nav class="menu-main">
+            <ul class="lista">
+                <li class="lista-item">
+                    <button data-nome="prodotti">
+                        <span>I nostri prodotti</span>
+                        <svg class="menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        </svg>
+                        <svg class="menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                        </svg>
+                    </button>
+                </li>
+                <div class="prodotti hidden">
+
+                </div>
+                <li class="lista-item">
+                    <a href="#">
+                        <span>Le novità</span>
+                    </a>
+                </li>
+                <li class="lista-item">
+                    <button data-nome="mondo-mc">
+                        <span>Il mondo McDonald's</span>
+                        <svg class="menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        </svg>
+                        <svg class="menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                        </svg>
+                    </button>
+                </li>
+                <div class="mondo-mc hidden"></div>
+                <li class="lista-item">
+                    <a href="#">
+                        <span>It's Happy Meal Time</span>
+                    </a>
+                </li>
+                <li class="lista-item">
+                    <button data-nome="impegno">
+                        <span>Il nostro impegno</span>
+                        <svg class="menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        </svg>
+                        <svg class="menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                        </svg>
+                    </button>
+                </li>
+                <div class="impegno hidden"></div>
+            </ul>
+        </nav>
+        <div class="menu-bottom">
+            <ul class="lista">
+                <li class="lista-item">
+                    <button>
+                        <span>McDonaldsItalia</span>
+                        <svg class="menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        </svg>
+                        <svg class="menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                        </svg>
+                    </button>
+                <li class="lista-item">
+                    <button>
+                        <span>Lavora con noi</span>
+                        <svg class="menu-chiuso" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        </svg>
+                        <svg class="menu-aperto hidden" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#888888"
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                        </svg>
+                    </button>
+                </li>
+                <li class="lista-item">
+                    <a href="#">
+                        <span>Diventa Franchisee</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="avviso-frode">
+            <a href="#">
+                <img src="https://www.mcdonalds.it/themes/mcd/build/images/header/bell.png" alt="">
+                <span>Avviso importante frode</span>
+            </a>
+        </div>
+    </div>
+    <div class="menu-prodotti hidden">
+        <div class="menu-prodotti-container">
+            <ul class="left">
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/menu">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/icon-menu--categorie-menu.jpg.webp?itok=AeyKHgjH"
+                            alt="">
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/panini">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/panini--icon-menu_1.jpg.webp?itok=VtzQuEDG"
+                            alt="">
+                        <span>Panini</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/insalate">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/icon-menu--insalate.jpg.webp?itok=i4MyrdrP"
+                            alt="">
+                        <span>Insalate</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/patatine">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/patatine_thumb_menu.jpg.webp?itok=QPsMZIcc"
+                            alt="">
+                        <span>Patatine</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/nuggets-e-sfiziosita">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/sfiziosita_thumb_menu.jpg.webp?itok=qwv9UL-u"
+                            alt="">
+                        <span>Nuggets e sfiziosità</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/snack-freschi">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/snack_freschi-header.jpg.webp?itok=Pyreuems"
+                            alt="">
+                        <span>Snack Freschi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/bevande">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/bibite-thumb-menu.png.webp?itok=jf9Dn93k"
+                            alt="">
+                        <span>Bevande</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/gelati-e-dessert">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/icon-menu--gelati-dessert_1.jpg.webp?itok=7WFC6Rr8"
+                            alt="">
+                        <span>Gelati e dessert</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/salse">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/salse_thumb_menu.jpg.webp?itok=77SHyAJz"
+                            alt="">
+                        <span>Salse</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/salvaeuro">
+                        <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/icon-menu--salvaeuro_0.jpg.webp?itok=_b-UoHV-"
+                            alt="">
+                        <span>Salvaeuro®</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="right">
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/mccafe">
+                        <div>
+                            <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/mccafe--icona-menu.jpg.webp?itok=4NUSNfpt"
+                                alt="">
+                        </div>
+                        <span>McCafé®</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/mccafe">
+                        <div>
+                            <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/happy-meal--icon--menu_0.jpg.webp?itok=cGS-Kq5p"
+                                alt="">
+                        </div>
+                        <span>Happy Meal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcdonalds.it/prodotti/crispy-mcbacon-temptation">
+                        <div>
+                            <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/thumb--spicy-gran-crispy.jpg.webp?itok=9u_txCcS"
+                                alt="">
+                        </div>
+                        <span>Crispy McBacon® Temptation</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="section-slide">
+    </section>
+    <div class="button-container">
+        <button data-index="1"></button>
+        <button data-index="2"></button>
+        <button data-index="3"></button>
+        <button data-index="4"></button>
+        <button data-index="5"></button>
+        <button data-index="6"></button>
+        <button data-index="7"></button>
+        <button data-index="8"></button>
+        <button data-index="9"></button>
+        <button data-index="10"></button>
+        <button data-index="11"></button>
+        <button data-index="12"></button>
+        <button data-index="13"></button>
+        <button data-index="14"></button>
+        <button data-index="15"></button>
+        <button data-index="16"></button>
+        <button data-index="17"></button>
+        <button data-index="18"></button>
+        <button data-index="19"></button>
+        <button data-index="20"></button>
+    </div>
+    <section>
+        <div class="griglia-container">
+            <a href="https://www.mcdonalds.it/il-mondo-mcdonalds/ordina-in-app" class="griglia-item"><img
+                    class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/homepage-box-mop--dsk_0.jpg.webp?itok=yLLqVC_w"
+                    alt=""></a>
+            <a href="https://www.mcdonalds.it/il-mondo-mcdonalds/app-mobile" class="griglia-item"><img
+                    class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/homepage-box-app--dsk_2.jpg.webp?itok=s5Kag706"
+                    alt=""></a>
+            <a href="https://www.mcdonalds.it/il-mondo-mcdonalds/mcdrive" class="griglia-item"><img class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/homepage-mcdrive-dsk.png.webp?itok=3LtrUWQt"
+                    alt=""></a>
+            <a href="https://www.mcdonalds.it/il-mondo-mcdonalds/mcdelivery" class="griglia-item"><img
+                    class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/homepage---mcdelivery-generica_desktop.jpg.webp?itok=Fuxjvsy4"
+                    alt=""></a>
+            <a href="https://www.mcdonalds.it/la-qualita/la-qualita-parla-chiaro" class="griglia-item"><img
+                    class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/homepage-box-qualita--dsk.jpg.webp?itok=VRSZjyUz"
+                    alt=""></a>
+            <a href="https://www.mcdonalds.it/lavora-con-noi/candidatura-spontanea" class="griglia-item"><img
+                    class="griglia-img"
+                    src="https://www.mcdonalds.it/sites/default/files/styles/compressed/public/home_content/candidatura-spontanea--box-dsk.jpg.webp?itok=aLBU-4Yw"
+                    alt=""></a>
+        </div>
+    </section>
+    <div class="social-separation">
+        <img src="https://www.mcdonalds.it/themes/mcd/build/images/social_feed/bg_potatos_left.png" alt="">
+        <h1>Il meglio dai nostri social</h1>
+        <img src="https://www.mcdonalds.it/themes/mcd/build/images/social_feed/bg_potatos_right.png" alt="">
+    </div>
+    <div class="sezione-instagram">
+        <a href="hhttps://www.instagram.com/reel/C5X4gkJqR1U/">
+            <img src="https://scontent-fra3-1.cdninstagram.com/v/t51.29350-15/435418883_1219890235551123_4375593206526047648_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=AQxrq8z3JcsAb6xFdNT&_nc_ht=scontent-fra3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBnnaAX4SHQa53FBW2jCXgPQ9UWMq-As8sZSuhzOgylpQ&oe=66186AF8"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C5QKFzfJC1I/">
+            <img src="https://scontent-fra3-2.cdninstagram.com/v/t51.29350-15/435136027_1127598041613248_867284698168383675_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=dIWJUg0AcTAAb4DlO-0&_nc_oc=AdgdMT639btSg57Zp_6J5RGgy11ORt7Gj0KlYLDIIS-7Y_kmUrLCFwM0j-KX7gga8EM&_nc_ht=scontent-fra3-2.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCbfN9fZVd2duS5DEahfvBUuZe_2t19TwGVLJmayVe7pg&oe=661868D0"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C47tNhKoyaB/">
+            <img src="https://scontent-fra3-1.cdninstagram.com/v/t51.29350-15/433761002_876800067582440_2471593340957869344_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=uH28mmDjPJEAb6HA_AV&_nc_ht=scontent-fra3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBiXTMWizZ1QyP5k7zMkXU4_phEVZXAQhIAXDhLBrdaPw&oe=66187E7C"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4z44WHIuQw/">
+            <img src="https://scontent-fra5-1.cdninstagram.com/v/t51.29350-15/433691252_2178678029140507_6858657537624592442_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=TuGmn5VIHy0Ab4sPQNk&_nc_ht=scontent-fra5-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCQ_GQo8-0HMCDAgD53qjEWRrOvimAD4bzpeX8EknZvfg&oe=66184F84"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4h3dlCsLuA/">
+            <img src="https://scontent-fra3-1.cdninstagram.com/v/t51.29350-15/433249240_1389738275237196_8197641285154987217_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=jjM613mvGE0Ab4PpNYk&_nc_ht=scontent-fra3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCU8CRTQGy8P5zX2NL3Hx7ZgztNawU1vyNFrm9k34agbg&oe=66186294"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4fQnMRMkia/">
+            <img src="https://scontent-fra3-1.cdninstagram.com/v/t51.29350-15/432605267_1046688286427148_6257794414280700701_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=lXIoP67V-ksAb5vUN-8&_nc_ht=scontent-fra3-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBeK0eZuhzKnssmAQC4C1uNq94STy5ROCgv2_MMMC8vHA&oe=66185ACC"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4cuaPasoM_/">
+            <img src="https://scontent-fra3-2.cdninstagram.com/v/t51.29350-15/432429948_766269572119650_507801519853578773_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=21ve-EUzLTYAb4E8Waq&_nc_ht=scontent-fra3-2.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBLDSuo6guwBj73vOC6UUg10a0Rs9228XpOJn3tAfdEAg&oe=66188390"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4aJIwkMouH/">
+            <img src="https://scontent-fra5-2.cdninstagram.com/v/t51.29350-15/432394185_1639809276762498_4701197540474621829_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=wCj_I2yTWKsAb4twDs0&_nc_ht=scontent-fra5-2.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCbd64SYoTl8l-iecpVmg-B8DJGmEZgWBFes-VuZ4cRjA&oe=661852FE"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/p/C4XtezpM_mh/">
+            <img src="https://scontent-fra5-2.cdninstagram.com/v/t51.29350-15/432431155_1583335899151047_514913191254839601_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=oOaT98RZHQQAb5JyNeY&_nc_ht=scontent-fra5-2.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBdtrXknD5v0-UV1mKnKX9s-2l85lDn2ELRSwrS7eEnOg&oe=66185188"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4P1ZbTsNP4/">
+            <img src="https://scontent-fra5-1.cdninstagram.com/v/t51.29350-15/431748152_1414584089150333_1726950494080616547_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=Ppa-mb08uKsAb5j5SPT&_nc_ht=scontent-fra5-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDN0clvSl-KP9e_vEQZi32iy2TeUC419WOpr6JgSmyieA&oe=661852D3"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C3ZuQuNMYKQ/">
+            <img src="https://scontent-ams2-1.cdninstagram.com/v/t51.29350-15/431755162_426737249836940_3082272035649611645_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=RpOh_Ykiy1kAX_vWz01&_nc_ht=scontent-ams2-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCabTbVPombgdA5SCH5MjADa7nwfZ1KJpV1N47RY2_Abg&oe=6605CB02"
+                alt="">
+        </a>
+        <a href="https://www.instagram.com/reel/C4z44WHIuQw/">
+            <img src="https://scontent-ams2-1.cdninstagram.com/v/t51.29350-15/429231298_1364670107560963_8618295740537878361_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=_dx4dorr-FQAX8NnhM1&_nc_oc=AdiUb-M2yJpXRB_ZqT9jFJ7cE9IAkxjqjJi88Z-fM4JNmh6Btm7Q8N_nVbnCf3O8a9k&_nc_ht=scontent-ams2-1.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfBlHhNzwVL5SwV-zG-An5o6xMOB53OC9uqXaSSWOeqqDQ&oe=66057944"
+                alt="">
+        </a>
+    </div>
+    <div class="share">
+        <p>Condividi questa pagina</p>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.mcdonalds.it/">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+            </svg></a>
+        <a href="https://twitter.com/intent/tweet?text=https://www.mcdonalds.it/">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+            </svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=https://www.mcdonalds.it/">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+            </svg>
+        </a>
+    </div>
+    <footer class="footer-1">
+        <div class="footer-1-left">
+            <div><img
+                    src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/thumb_app-mobile.jpg.webp?itok=lrX2hz7N"
+                    alt=""></div>
+            <div>
+                <h3>
+                    <span>Scarica la nostra APP</span>
+                </h3>
+                <span>Non perdere neanche un'offerta. Con la nostra App scopri ogni giorno tante sorprese pensate per
+                    te.</span>
+            </div>
+        </div>
+        <div class="footer1-right">
+            <div><a href="https://www.mcdonalds.it/il-mondo-mcdonalds/app-mobile">Scopri di più</a></div>
+        </div>
+    </footer>
+    <footer class="footer-1-mobile">
+        <div class="top">
+            <img src="https://www.mcdonalds.it/sites/default/files/styles/header_icon/public/menu-icon/thumb_app-mobile.jpg.webp?itok=lrX2hz7N"
+                alt="">
+            <h3>
+                <span>Scarica la nostra APP</span>
+            </h3>
+        </div>
+        <div class="center">
+            <p>
+                Non perdere neanche un'offerta. Con la nostra App scopri ogni giorno tante sorprese pensate per te.
+            </p>
+        </div>
+        <div class="bottom">
+            <a href="https://www.mcdonalds.it/il-mondo-mcdonalds/app-mobile">Scopri di più</a>
+        </div>
+    </footer>
+    <div class="follow-social">
+        <h3>Seguici su</h3>
+        <a href="https://www.instagram.com/mcdonaldsitalia/">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+        </a>
+        <a href="https://www.facebook.com/McDonaldsItalia">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/user/mcdonaldsitalia">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+            </svg>
+        </a>
+    </div>
+    <footer class="footer-end">
+        <div class="sup">
+            <nav class="nav-sup-footer">
+                <a href="https://www.mcdonalds.it/avviso-importante" id="antifrode">Avviso antifrode</a>
+                <a href="https://www.mcdonalds.it/faq">FAQ</a>
+                <a href="https://www.mcdonalds.it/contattaci">Contattaci</a>
+                <a href="https://www.mcdonalds.it/tua-opinione-conta">La tua opinione conta</a>
+                <a href="https://www.mcdonalds.it/regolamenti">Regolamenti</a>
+                <a href="https://www.mcdonalds.it/privacy/privacy-policy">Privacy</a>
+                <a href="https://www.mcdonalds.it/cookies">Cookies</a>
+                <a href="https://www.mcdonalds.it/termini-e-condizioni">Termini e condizioni</a>
+                <a href="https://www.mcdonalds.it/lavora-con-noi/candidatura-spontanea">InviaCV</a>
+            </nav>
+        </div>
+        <div class="inf">
+            <p>Copyright © 2024 McDonald's. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
